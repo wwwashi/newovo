@@ -17,7 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="56"/>
             <RowDefinition/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Button VerticalAlignment="Center" x:Name="AddEmployer" Content="Добавить сотрудника" Grid.Column="3" Grid.Row="0"
@@ -49,7 +49,7 @@
                             <StackPanel MinWidth="150" MaxWidth="150" MinHeight="195" MaxHeight="195" Grid.Column="1" Margin="5">
                                 <Image Name="ImageUsers" Width="85" Height="85" Margin="5" Grid.Row="0" Source="/Resources/profile.png"/>
                                 <TextBlock HorizontalAlignment="Center" Margin="3,3,3,0" FontSize="16" TextWrapping="Wrap" FontWeight="Bold">
-                                            <Run Text="{Binding UserRole.NameRole}"/>
+                                            <Run Text="{Binding UsersRole.NameRole}"/>
                                 </TextBlock>
                                 <TextBlock HorizontalAlignment="Center" Margin="3,3,3,0" FontSize="14" TextWrapping="Wrap">
                                             <Run Text="
@@ -64,5 +64,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Button Content="Сохранить в Excel" Height="30" Click="btnSaveToExcel_Click" Grid.Row="2" Grid.Column="3" Margin="5" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

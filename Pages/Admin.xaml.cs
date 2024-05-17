@@ -1,6 +1,11 @@
-﻿using newOvo.Data;
+﻿using ClosedXML.Excel;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using Microsoft.Win32;
+using newOvo.Data;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -132,6 +137,60 @@ namespace newOvo.Pages
                     }
 
                 }
+            }
+        }
+
+        private void btnSaveToExcel_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Создаем диалоговое окно для сохранения файла
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Excel Workbook|*.xlsx",
+                    Title = "Save an Excel File"
+                };
+
+                // Проверяем, нажата ли кнопка "Сохранить" в диалоговом окне
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    // Получаем список пользователей из базы данных
+                    var users = context.Users.ToList();
+
+                    using (var workbook = new XLWorkbook())
+                    {
+                        var worksheet = workbook.Worksheets.Add("Users");
+
+                        // Добавляем заголовки
+                        worksheet.Cell(1, 1).Value = "Name";
+                        worksheet.Cell(1, 2).Value = "Surname";
+                        worksheet.Cell(1, 3).Value = "Midname";
+                        worksheet.Cell(1, 4).Value = "Role";
+
+                        // Добавляем пользователей в таблицу
+                        int row = 2;
+                        foreach (var user in users)
+                        {
+                            worksheet.Cell(row, 1).Value = user.Name;
+                            worksheet.Cell(row, 2).Value = user.Surname;
+                            worksheet.Cell(row, 3).Value = user.Midname;
+                            worksheet.Cell(row, 4).Value = user.UsersRole.NameRole;
+
+                            row++;
+                        }
+
+                        // Сохраняем файл
+                        workbook.SaveAs(saveFileDialog.FileName);
+                    }
+
+                    MessageBox.Show("Excel file saved successfully!");
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = $"An unexpected error occurred: {ex.Message}\n\n";
+                message += $"Stack trace:\n{ex.StackTrace}";
+                MessageBox.Show(message);
             }
         }
     }

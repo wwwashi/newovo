@@ -89,3 +89,15 @@ C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\BouncyCastle.Cryptography.dll
 C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\itext.bouncy-castle-adapter.dll
 C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\BouncyCastle.Cryptography.xml
 C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\itext.bouncy-castle-adapter.xml
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\ClosedXML.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\DocumentFormat.OpenXml.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\ExcelNumberFormat.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\Irony.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\SixLabors.Fonts.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\System.IO.Packaging.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\XLParser.dll
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\ClosedXML.xml
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\DocumentFormat.OpenXml.xml
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\ExcelNumberFormat.xml
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\SixLabors.Fonts.xml
+C:\hwaya\VisualStudio\Project\newOvo\bin\Debug\System.IO.Packaging.xml

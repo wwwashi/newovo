@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:newOvo"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="550" MinWidth="700"
-                           MaxHeight="550" MaxWidth="700">
+        MinHeight="550" MinWidth="700"
+        MaxHeight="550" MaxWidth="700"
+        Title="Вневедомственная охрана" Icon="/Resources/icon.ico">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
